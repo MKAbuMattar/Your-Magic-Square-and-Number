@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        if (window.navigator.userAgent.indexOf("Trident/") > 0) {
+            alert("Internet Explorer is not supported.")
+            window.location.replace("/Your-Magic-Square/")
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="">
+    <meta name="author" content="Mohammad Khaled Abu Mattar">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="icon" href="./assets/icons/favicon.ico">
+
+    <link rel="apple-touch-icon" href="./assets/icons/logo192.png">
+    <link rel="manifest" href="./manifest.json">
+
+    <title>Your Magic Square</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="floating">
+        <a id="myBtn1" class="floating__btn add-button" title="Install App">
+            <svg height="48" width="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" id="install_app"
+                    d="M8 7C8 4.23858 10.2386 2 13 2H35C37.7614 2 40 4.23858 40 7V41C40 43.7614 37.7614 46 35 46H13C10.2386 46 8 43.7614 8 41V7ZM13 6C12.4477 6 12 6.44772 12 7V41C12 41.5523 12.4477 42 13 42H35C35.5523 42 36 41.5523 36 41V7C36 6.44772 35.5523 6 35 6H13ZM18 10C18 9.44772 18.4477 9 19 9H29C29.5523 9 30 9.44772 30 10V12C30 12.5523 29.5523 13 29 13H19C18.4477 13 18 12.5523 18 12V10ZM24 39C25.6569 39 27 37.6569 27 36C27 34.3431 25.6569 33 24 33C22.3431 33 21 34.3431 21 36C21 37.6569 22.3431 39 24 39Z">
+                </path>
+            </svg>
+        </a>
+    </div>
+
+    <div class="box">
+        <header class="title">
+            <h1>Your Magic Square & Number</h1>
+        </header>
+
+        <div>
+            <div class="select__box">
+                <select id="yeardropdown">
+                    <option value="" disabled selected>Year</option>
+                </select>
+
+                <select id="monthdropdown">
+                    <option value="" disabled selected>Month</option>
+                </select>
+
+                <select id="daydropdown">
+                    <option value="" disabled selected>Day</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="btn__box">
+            <button onclick="yourMagicSquare()" class="btn btn__block"> submit </button> <br><br>
+        </div>
+
+        <div id="magicSquare"></div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            All Copyrights Reserved &#169; 2020
+            <script>
+                new Date().getFullYear() > 2020 && document.write(" - " + new Date().getFullYear());
+            </script>, Made With <mark>❤</mark> & a lot ☕ By <a class="" href="https://mkabumattar.github.io/">Mohammad
+                Khaled Abu Mattar</a>
+        </p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
